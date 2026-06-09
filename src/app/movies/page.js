@@ -4,14 +4,14 @@ export default async function movies(){
 
   return(
     <div>
-      <h1>
+      {/* <h1>
         Movies
       </h1>
       {data.search.map((movie)=>(
         <div key={movie.imdbID}>
           <p>{movie.Title}</p>
         </div>
-      ))}
+      ))} */}
     </div>
   )
 }
