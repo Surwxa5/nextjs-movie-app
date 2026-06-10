@@ -1,13 +1,13 @@
 'use client'
 import Image from "next/image";
-// Imports useSearchParams from Next.js Imports useSearchParams from Next.js. This specific built-in hook lets you read the text after the ? in the current web address.
-import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { useRouter } from 'next/navigation'
 
 export default function Home() {
    const [search,setSearch] = useState('')
         const router = useRouter()
+
+        
 
 // navigate to a page
 function handleSearch(){
