@@ -1,4 +1,4 @@
-
+import Link from  'next/link'
 // Imports useSearchParams from Next.js. This specific built-in hook lets you read the text after the ? in the current web address.
 export default async function movies({ searchParams }){
     const useparams = await searchParams;
@@ -16,6 +16,7 @@ export default async function movies({ searchParams }){
 
       <div style={{display:'flex', flexWrap:'wrap',marginTop:'30px', justifyContent:'center',gap:'20px'}}>
       {data.Search?.map((movie)=>(
+        <Link key={movie.imdbID} href = {`/movies/${movie.imdbID}`}>
         <div key={movie.imdbID} style={{ width: '150px', textAlign: 'center' }}>
           {/* for image poster */}
           {/* using ternery operater */}
@@ -33,6 +34,7 @@ export default async function movies({ searchParams }){
          <p style={{ marginTop: '8px', fontWeight: 'bold', fontSize: '14px' }}>{movie.Title}</p>
          <p style={{ fontSize: '12px', color: 'gray' }}>{movie.Year}</p>
         </div>
+        </Link>
       ))} 
      </div>
     </div>
